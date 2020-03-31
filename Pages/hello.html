@@ -19,23 +19,31 @@
 
     <div class="container">
 
-        <form method="post" action="hello.php">
+        <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdV4U3zDU3-sYWnOVEbLMJ5YhkWY3LZqpg9DLqX4yiEnxG7xw/viewform?usp=pp_url&entry.1055693984=Kevin+Quinn&entry.213095245=kevinquinnw@gmail.com&entry.151791766=Hello!" target="hidden_iframe" onsubmit="submitted=true;">
         
             <label>Name</label>
-            <input name="name" placeholder="Type Here">
+            <input name="entry.1055693984" id="entry.1055693984" type="text" placeholder="Type Here">
                     
             <label>Email</label>
-            <input name="email" type="email" placeholder="Type Here">
+            <input name="entry.213095245" id="entry.213095245" type="text" placeholder="Type Here">
                     
             <label>Message</label>
-            <textarea name="message" placeholder="Type Here"></textarea>
-
-            <label>*What is 3*3? (Anti-spam)</label>
-            <input name="human" placeholder="Type Here">
+            <textarea name="entry.151791766" placeholder="Type Here" id="entry.151791766"></textarea>
                     
             <input id="submit" name="submit" type="submit" value="Submit">
                 
         </form>
+        
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+                                                                                                             <script type = "text/javascript">var submitted=false;
+                                                                                                       </script>
+                                                                                                     
+        <script type="text/javascript"> $(('#gform').on('submit', function(e) {
+  $('#gform *').fadeOut(2000);
+  $('#gform').prepend('Your submission has been processed! :)');
+  });
+                                                                                                       </script
+                                                                                                  
 
     </div>
 </body>
